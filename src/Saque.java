@@ -9,10 +9,9 @@
  * @author maury
  */
 public class Saque extends Transacao{
-    
-    private double valor;
-    
- 
 
-    
+    public Saque(Conta conta) {
+        super.sacar(conta);
+    }
+
 }

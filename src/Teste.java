@@ -4,13 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JFrame;
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  *
  * @author maury
@@ -71,6 +65,7 @@ public class Teste extends JFrame {
                     break;
                 case "Extrato":
                     System.out.println("Extrato");
+                    
                     break;
                 default:
                     break;
@@ -82,7 +77,8 @@ public class Teste extends JFrame {
     public static void main(String[] args) {
         Teste buttonFrame = new Teste(); // create ButtonFrame
         buttonFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        buttonFrame.setSize(400, 400); // set frame size
+        buttonFrame.setResizable(false);
+        buttonFrame.setSize(430, 350); // set frame size
         buttonFrame.setVisible(true); // display frame
 
     }
