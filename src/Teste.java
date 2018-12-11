@@ -17,10 +17,11 @@ import javax.swing.JOptionPane;
  */
 public class Teste extends JFrame {
 
-    private JButton buttonLogin;
-    private JButton buttonSaque;
-    private JButton buttonDeposito;
-    private JButton buttonExtrato;
+    private final JButton buttonLogin;
+    private final JButton buttonCadastro;
+    private final JButton buttonSaque;
+    private final JButton buttonDeposito;
+    private final JButton buttonExtrato;
 
     public Teste() {
         super("Caixa eletronico");
@@ -28,6 +29,9 @@ public class Teste extends JFrame {
 
         buttonLogin = new JButton("Login");
         add(buttonLogin);
+        
+        buttonCadastro = new JButton("Cadastro");
+        add(buttonCadastro);
 
         buttonSaque = new JButton("Saque");
         add(buttonSaque);
@@ -41,6 +45,7 @@ public class Teste extends JFrame {
         // create new ButtonHandler for button event handling 
         ButtonHandler handler = new ButtonHandler();
         buttonLogin.addActionListener(handler);
+        buttonCadastro.addActionListener(handler);
         buttonSaque.addActionListener(handler);
         buttonDeposito.addActionListener(handler);
         buttonExtrato.addActionListener(handler);
@@ -49,16 +54,23 @@ public class Teste extends JFrame {
     private class ButtonHandler implements ActionListener {
         // handle button event
 
+        @Override
         public void actionPerformed(ActionEvent event) {
             switch (event.getActionCommand()) {
                 case "Login":
                     System.out.println("Login");
                     break;
+                case "Cadastro":
+                    System.out.println("Cadastro");
+                    break;
                 case "Saque":
+                    System.out.println("Saque");
                     break;
                 case "Deposito":
+                    System.out.println("Deposito");
                     break;
                 case "Extrato":
+                    System.out.println("Extrato");
                     break;
                 default:
                     break;
