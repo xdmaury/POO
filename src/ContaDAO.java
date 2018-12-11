@@ -72,7 +72,7 @@ public class ContaDAO {
     public boolean isExistConta(int numConta, String senha){
         Boolean resut = false;
         ResultSet rs = null;
-        rs = MySQLDAO.getResultSet("SELECT * FROM tbl_cnta WHERE num_conta=? AND senha=?", numConta, senha);
+        rs = MySQLDAO.getResultSet("SELECT * FROM tbl_conta WHERE num_conta=? AND senha=?", numConta, senha);
         try{
             if(rs.next()){
                 resut = true;
