@@ -9,5 +9,11 @@
  * @author maury
  */
 public class Extrato extends Transacao{
+
+    public Extrato() {
+        
+    }
+    
+    
     
 }

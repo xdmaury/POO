@@ -14,6 +14,9 @@ public class Conta {
     private String senha;
     private double saldo_disponível;
     private double saldo_total;
+    
+    private double valor;
+    
 
     public Conta(int numConta, String senha, double saldo_disponível, double saldo_total) {
         setNumConta(numConta);
@@ -22,6 +25,16 @@ public class Conta {
         setSaldo_disponível(saldo_disponível);
         
     }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+    
+    
 
     public int getNumConta() {
         return numConta;

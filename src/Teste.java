@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JFrame;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -23,7 +24,7 @@ public class Teste extends JFrame {
 
         buttonLogin = new JButton("Login");
         add(buttonLogin);
-        
+
         buttonCadastro = new JButton("Cadastro");
         add(buttonCadastro);
 
@@ -59,18 +60,24 @@ public class Teste extends JFrame {
                     break;
                 case "Saque":
                     System.out.println("Saque");
+
+                    String valorSaque = JOptionPane.showInputDialog(
+                            "Informe valor do Saque");
+                    
+                    double valor = Double.parseDouble(valorSaque);
+
                     break;
                 case "Deposito":
                     System.out.println("Deposito");
                     break;
                 case "Extrato":
                     System.out.println("Extrato");
-                    
+
                     break;
                 default:
                     break;
             }
-            
+
         }
     }
 
